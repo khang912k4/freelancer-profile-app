@@ -22,7 +22,7 @@ export default function ThemeRegistry({ children, emotionCache = clientSideEmoti
   return (
     <CacheProvider value={emotionCache}>
       <ThemeProvider theme={theme}>
-        <LocalizationProvider dateAdapter={AdapterDateFns} locale={viLocale}>
+        <LocalizationProvider dateAdapter={AdapterDateFns} adapterLocale={viLocale}>
           <CssBaseline />
           <Box>{children}</Box>
         </LocalizationProvider>
